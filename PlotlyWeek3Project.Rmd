@@ -1,0 +1,18 @@
+---
+title: "Plotly Week 3 Project"
+author: "Vanessa Drury"
+date: "7/28/2020"
+output: html_document
+---
+ 
+   
+   
+``` {r, echo=F, message=F,warning=F}
+library(plotly)
+library(ggplot2)
+library(datasets)
+
+orange<-ggplot(Orange,aes(age,circumference))+geom_point(aes(color=Tree))+geom_line(aes(color=Tree))+theme_bw()+labs(title="Orange Tree Circumference Growth Over Time", x="Days since December 31, 1968", y="Circumference in millimeters")+scale_color_manual(values=c("deeppink","cadetblue1","chartreuse","darkorange","red"))
+ggplotly(orange)
+
+```
